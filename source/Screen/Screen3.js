@@ -35,7 +35,7 @@ function Screen3() {
             <View style={{ alignItems: "center" }}>
                 <View style={{ flexDirection: "row", alignItems: "center", paddingLeft: 60 }}>
                     <Image source={require("../Images/girlClap.png")} style={{ height: responsiveHeight(35), width: responsiveWidth(30) }} />
-                    <Pressable onPress={handlePress} style={styles.arrow}>
+                    <Pressable onPress={handlePress} style={({pressed})=> pressed ? [styles.arrow , {opacity:0.5}] : styles.arrow}>
                         <Image source={require("../Images/arrow.png")} style={styles.arrow}/>
                     </Pressable>
                 </View>
